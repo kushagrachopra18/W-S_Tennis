@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #557F33;
+    color: white;
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
+}
+
+/*Styles for navbar*/
+.navbar {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav .navbar-nav li a {
+    color: white !important;
+    font-size: 12px !important;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 25px !important;
+}
+
+nav .navbar-nav li a:hover {
+    text-decoration: underline !important;
+}
+
+/*Styles for main content area*/
+.header {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background: #56A902;
+    margin: 40px auto;
+    margin-top: 70px;
+    width: 600px;
+    max-width: 100vw;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #56A902;
+    margin: 10px auto;
+    width: 400px;
+}
+
+.cards {
+    /*Styles for grid that contains all cards*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-gap: 25px;
+    justify-content: space-evenly;
+}
+
+.name_card {
+    /*Styles for the grid area that makes up a card*/
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-auto-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "pic"
+        "pic"
+        "name"
+        "position";
+}
+
+.prof_pic {
+    width: 100%;
+    grid-area: pic;
+}
+
+.nametag {
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    background-color: #3B4E32;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.position {
+    grid-area: position;
+    display: flex;
+    justify-content: center;
+    background-color: #3B4E32;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*Styles for footer content area*/
+.footer {
+    display: grid;
+    background: black;
+    width: 100vw;
+    height: 200px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer_title {
+    background: none;
+    margin: 0 auto 10px;
+    width: auto;
+}
+
+.address {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#addr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 160px;
+}
+
+.phone {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.social {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    display: flex;
+}
+
+.fab {
+    margin: 0 10px;
+    color: white;
+}

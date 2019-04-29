@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #557F33;
+    color: white;
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
+}
+
+/*Styles for navbar*/
+.navbar {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+}
+
+nav .navbar-nav li a {
+    color: white !important;
+    font-size: 12px !important;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 25px !important;
+}
+
+nav .navbar-nav li a:hover {
+    text-decoration: underline !important;
+}
+
+/*Syles for "jumbo" image*/
+.jumbo {
+    z-index: -10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*Did this margins like this because the image has an annoying very this white border and this
+    hides some of it*/
+    margin-left: -1px;
+    margin-top: -3px;
+}
+
+/*Styles for main content area*/
+.content {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "hd hd ."
+        "hd hd poster"
+        "twt twt poster"
+        "twp twp poster"
+        "twp twp poster"
+        "twp twp poster"
+        "twp twp poster"
+        "tw tw poster"
+        "tw tw poster"
+        "tw tw poster"
+        "tw tw lt"
+        "oet oet links"
+        "oep oep links"
+        "oep oep links"
+        "oep oep links"
+        "oep oep links"
+        "oe oe links"
+        "oe oe links"
+        "oe oe links"
+        "oe oe links";
+}
+
+.header {
+    display: flex;
+    grid-area: hd;
+    justify-content: center;
+    align-self: center;
+    background: #56A902;
+    margin: 40px auto;
+    width: 600px;
+    max-width: 100vw;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #56A902;
+    margin: 10px auto;
+    width: 400px;
+}
+
+.tw_header {
+    grid-area: twt;
+}
+
+.tw_pic {
+    grid-area: twp;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100vw;
+}
+
+.tw_text {
+    grid-area: tw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    width: 700px;
+    max-width: 100vw;
+}
+
+.oe_header {
+    grid-area: oet;
+}
+
+.oe_pic {
+    grid-area: oep;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100vw;
+}
+
+.oe_text {
+    grid-area: oe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    width: 700px;
+    max-width: 100vw;
+}
+
+.ad {
+    grid-area: poster;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.links_title {
+    grid-area: lt;
+}
+
+.menubar {
+    grid-area: links;
+}
+
+.menubar ul {
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menubar ul li {
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 1px auto;
+}
+
+.menubar ul li:hover {
+    text-decoration: underline;
+}
+
+.menubar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*Styles for footer*/
+.footer {
+    display: grid;
+    background: black;
+    width: 100vw;
+    height: 200px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer_title {
+    background: none;
+    margin: 0 auto 10px;
+    width: auto;
+
+}
+
+.address {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#addr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 160px;
+}
+
+.phone {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.social {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    display: flex;
+}
+
+.fab {
+    margin: 0 10px;
+    color: white;
+}
+
+/*Creates a "stacked layout" to respond to tablet width and smaller devices*/
+@media only screen and (max-width: 1085px) {
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "hd"
+            "hd"
+            "twt"
+            "twp"
+            "twp"
+            "twp"
+            "twp"
+            "tw"
+            "tw"
+            "tw"
+            "tw"
+            "oet"
+            "oep"
+            "oep"
+            "oep"
+            "oep"
+            "oe"
+            "oe"
+            "oe"
+            "oe"
+            "."
+            "."
+            "poster"
+            "poster"
+            "poster"
+            "poster"
+            "poster"
+            "poster"
+            "poster"
+            "poster"
+            "lt"
+            "links"
+            "links"
+            "links"
+            "links"
+            "links"
+            "links"
+            "links"
+            "links";
+    }
+}
